@@ -1,0 +1,161 @@
+<!--<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+<body>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Multiplayer Guess Game</title>
+</head>
+<body>
+  <h2>Guess the number (0–9)</h2>
+  <input type="text" id="playerName" placeholder="Enter your name" />
+  <input type="number" id="guessInput" placeholder="Enter your guess" min="0" max="9" />
+  <button id="guessBtn">Guess</button>
+
+  <p id="message"></p>
+  <h3>Scoreboard:</h3>
+  <ul id="scoreList"></ul>
+
+  <script>
+    let scores = {}; // Dictionary to store player: points
+    let randomDigit = Math.floor(Math.random() * 10);
+
+    const nameInput = document.getElementById("playerName");
+    const guessInput = document.getElementById("guessInput");
+    const message = document.getElementById("message");
+    const guessBtn = document.getElementById("guessBtn");
+    const scoreList = document.getElementById("scoreList");
+
+    function updateScoreboard() {
+      scoreList.innerHTML = "";
+      for (let player in scores) {
+        const li = document.createElement("li");
+        li.textContent = `player:{scores[player]} points`;
+        scoreList.appendChild(li);
+      }
+    }
+
+    guessBtn.addEventListener("click", () => {
+      const name = nameInput.value.trim();
+      const guess = Number(guessInput.value);
+
+      if (!name) {
+        message.textContent = "Please enter your name.";
+        return;
+      }
+
+      if (!(name in scores)) {
+        scores[name] = 0; // Initialize player score
+      }
+
+      if (guess === randomDigit) {
+        scores[name]++;
+        message.textContent = `🎉 Correct, name! Point added.`;
+       else 
+        message.textContent = `❌ Wrong,{name}. Correct was ${randomDigit}.`;
+      }
+
+      updateScoreboard();
+      randomDigit = Math.floor(Math.random() * 10);
+      guessInput.value = "";
+      guessInput.focus();
+    });
+  </script>
+  
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Multiplayer Guess Game</title>
+</head>
+<body>
+  <h2>Guess the number (0–9)</h2>
+  <input type="text" id="playerName" placeholder="Enter your name" />
+  <input type="number" id="guessInput" placeholder="Enter your guess" min="0" max="9" />
+  <button id="guessBtn">Guess</button>
+
+  <p id="message"></p>
+  <h3>Scoreboard:</h3>
+  <ul id="scoreList"></ul>
+
+  <script>
+    let scores = {}; // Dictionary to store player: points
+    let randomDigit = Math.floor(Math.random() * 10);
+
+    const nameInput = document.getElementById("playerName");
+    const guessInput = document.getElementById("guessInput");
+    const message = document.getElementById("message");
+    const guessBtn = document.getElementById("guessBtn");
+    const scoreList = document.getElementById("scoreList");
+
+    function updateScoreboard() {
+      scoreList.innerHTML = "";
+      for (let player in scores) {
+        const li = document.createElement("li");
+        li.textContent = `player:{scores[player]} points`;
+        scoreList.appendChild(li);
+      }
+    }
+
+    guessBtn.addEventListener("click", () => {
+      const name = nameInput.value.trim();
+      const guess = Number(guessInput.value);
+
+      if (!name) {
+        message.textContent = "Please enter your name.";
+        return;
+      }
+
+      if (!(name in scores)) {
+        scores[name] = 0;
+      }
+
+      if (guess === randomDigit) {
+        scores[name]++;
+        message.textContent = `🎉 Correct, name! Point added.`;
+       else 
+        message.textContent = `❌ Wrong,{name}. Correct was ${randomDigit}.`;
+      }
+
+      updateScoreboard();
+      randomDigit = Math.floor(Math.random() * 10);
+      guessInput.value = "";
+      guessInput.focus();
+    });
+  </script>
+</body>
+</html>-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Multiplayer Guess Game</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <h2>Guess the number (0–5)</h2>
+  <input type="text" id="playerName" placeholder="Enter your name" />
+  <input type="number" id="guessInput" placeholder="Enter your guess" min="0" max="9" />
+  <button id="guessBtn">Guess</button>
+
+  <p id="message"></p>
+  <h3>Scoreboard:</h3>
+  <ul id="scoreList"></ul>
+
+  <script src="java.js">
+
+  </script>
+</body>
+</html>
+

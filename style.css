@@ -1,0 +1,98 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+body {
+  font-family: 'Orbitron', sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #00fff7;
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow:
+    0 0 10px #00fff7,
+    0 0 20px #00fff7,
+    0 0 30px #00fff7;
+  text-align: center;
+}
+
+input[type="text"],
+input[type="number"] {
+  width: 80%;
+  padding: 15px;
+  margin: 12px 0;
+  border: 2px solid #00fff7;
+  border-radius: 10px;
+  background: rgba(0, 255, 247, 0.1);
+  color: #00fff7;
+  font-size: 18px;
+  outline: none;
+  box-shadow: 0 0 8px #00fff7;
+  transition: 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+  background: rgba(0, 255, 247, 0.3);
+  box-shadow: 0 0 15px #00fff7;
+  border-color: #00fff7;
+}
+
+button {
+  background: #00fff7;
+  color: #04232b;
+  border: none;
+  padding: 15px 40px;
+  font-size: 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow:
+    0 0 15px #00fff7,
+    inset 0 0 10px #00fff7;
+  transition: 0.3s ease;
+  font-weight: 700;
+}
+
+button:hover {
+  background: #00d8cf;
+  box-shadow:
+    0 0 20px #00d8cf,
+    inset 0 0 15px #00d8cf;
+}
+
+#message {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: 600;
+  min-height: 24px;
+  color: #00ffd2;
+  text-shadow:
+    0 0 5px #00ffd2,
+    0 0 10px #00ffd2;
+}
+
+h2, h3 {
+  color: #00fff7;
+  text-shadow:
+    0 0 5px #00fff7,
+    0 0 10px #00fff7;
+  margin-bottom: 10px;
+}
+
+ul#scoreList {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 15px;
+  text-align: left;
+}
+
+ul#scoreList li {
+  background: rgba(0,255,247,0.15);
+  border-left: 4px solid #00fff7;
+  margin: 7px 0;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-weight: 600;
+  color: #00e0cc;
+  box-shadow: 0 0 8px #00e0cc;
+}
